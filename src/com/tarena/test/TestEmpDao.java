@@ -15,17 +15,11 @@ public class TestEmpDao {
      */
     @Test
     public void testFindAll() {
-        ApplicationContext ctx = 
-            new ClassPathXmlApplicationContext(
-                    "applicationContext.xml");
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         EmpDao dao = ctx.getBean(EmpDao.class);
         List<Emp> list = dao.findAll();
         for(Emp e : list) {
-            System.out.println(
-                e.getEmpno() + " " +
-                e.getEname() + " " +
-                e.getJob()
-            );
+            System.out.println(e.getEmpno() + " " + e.getEname() + " " +e.getJob());
         }
     }
 }
